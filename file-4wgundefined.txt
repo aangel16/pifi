@@ -1,0 +1,16 @@
+{
+    "name": "Wi-Fi Security Bot",
+    "short_name": "WiFi Security",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0b1020",
+    "theme_color": "#0b1020",
+    "lang": "es",
+    "icons": [
+        {
+            "src": "icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

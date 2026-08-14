@@ -1,0 +1,107 @@
+
+    <div class="app-container">
+        <header>
+            <h1>🔐 Wi-Fi Security Bot</h1>
+            <p class="subtitle">Auditoría de seguridad local</p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active">Analizador</button>
+            <button class="tab-btn">Generador</button>
+            <button class="tab-btn">Diccionario</button>
+            <button class="tab-btn">Checklist</button>
+        </nav>
+
+        
+        <section id="analyzer" class="tab-content active">
+            <div class="card">
+                <h2>🔍 Analizador de Contraseñas</h2>
+                <p>Ingresa una contraseña para evaluar su fortaleza:</p>
+                <input type="text" id="passwordInput" placeholder="Escribe una contraseña..." autocomplete="off">
+                <div id="strength-meter">
+                    <div class="meter-bar">
+                        <div id="strength-fill"></div>
+                    </div>
+                    <span id="strength-text">Fortaleza: --</span>
+                </div>
+                <ul id="password-tips"></ul>
+            </div>
+        </section>
+
+        
+        <section id="generator" class="tab-content">
+            <div class="card">
+                <h2>🎲 Generador de Contraseñas</h2>
+                <div class="options">
+                    <label>Longitud: <span id="lengthValue">16</span></label>
+                    <input type="range" id="lengthSlider" min="8" max="32" value="16">
+                    <div class="checkboxes">
+                        <label><input type="checkbox" id="useUpper" checked=""> Mayúsculas (A-Z)</label>
+                        <label><input type="checkbox" id="useLower" checked=""> Minúsculas (a-z)</label>
+                        <label><input type="checkbox" id="useNumbers" checked=""> Números (0-9)</label>
+                        <label><input type="checkbox" id="useSymbols" checked=""> Símbolos (!@#$%)</label>
+                    </div>
+                </div>
+                <button class="btn-primary">Generar Contraseña</button>
+                <div class="result-box">
+                    <input type="text" id="generatedPassword" readonly="">
+                    <button class="btn-icon">📋</button>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="dictionary" class="tab-content">
+            <div class="card">
+                <h2>📚 Análisis de Diccionario</h2>
+                <p>Pega tu lista de contraseñas para analizar (una por línea):</p>
+                <textarea id="dictionaryInput" placeholder="password123
+12345678
+qwerty..." rows="6"></textarea>
+                <button class="btn-primary">Analizar Diccionario</button>
+                <div id="dictionary-results" class="results hidden">
+                    <h3>Resultados del Análisis:</h3>
+                    <div class="stats-grid">
+                        <div class="stat"><span id="total-passwords">0</span><label>Total</label></div>
+                        <div class="stat weak"><span id="weak-passwords">0</span><label>Débiles</label></div>
+                        <div class="stat medium"><span id="medium-passwords">0</span><label>Medias</label></div>
+                        <div class="stat strong"><span id="strong-passwords">0</span><label>Fuertes</label></div>
+                    </div>
+                    <div id="common-patterns"></div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="checklist" class="tab-content">
+            <div class="card">
+                <h2>✅ Checklist de Seguridad del Router</h2>
+                <p>Verifica la seguridad de tu red Wi-Fi:</p>
+                <ul class="checklist">
+                    <li><label><input type="checkbox"> Cambiar contraseña por defecto del router</label></li>
+                    <li><label><input type="checkbox"> Usar WPA3 o WPA2-AES (no WPA/WEP)</label></li>
+                    <li><label><input type="checkbox"> Desactivar WPS (Wi-Fi Protected Setup)</label></li>
+                    <li><label><input type="checkbox"> Ocultar SSID (nombre de red)</label></li>
+                    <li><label><input type="checkbox"> Habilitar firewall del router</label></li>
+                    <li><label><input type="checkbox"> Desactivar acceso remoto al panel</label></li>
+                    <li><label><input type="checkbox"> Actualizar firmware del router</label></li>
+                    <li><label><input type="checkbox"> Usar contraseña de red de +12 caracteres</label></li>
+                    <li><label><input type="checkbox"> Habilitar filtrado MAC (opcional)</label></li>
+                    <li><label><input type="checkbox"> Revisar dispositivos conectados regularmente</label></li>
+                </ul>
+                <div id="checklist-progress">
+                    <div class="progress-bar"><div id="progress-fill"></div></div>
+                    <span id="progress-text">0/10 completado</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>⚠️ Solo para auditoría autorizada</p>
+            <p class="small">Versión 1.0 • PWA Offline</p>
+        </footer>
+    </div>
+
+    
+    
+
