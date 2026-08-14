@@ -1,0 +1,40 @@
+
+    <div class="app-container">
+        <header>
+            <h1>🔐 Wi-Fi Security Bot</h1>
+            <p class="subtitle">Auditoría de seguridad local</p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active">Analizador</button>
+            <button class="tab-btn">Generador</button>
+            <button class="tab-btn">Diccionario</button>
+            <button class="tab-btn">Checklist</button>
+        </nav>
+
+        
+        <section id="analyzer" class="tab-content active">
+            <div class="card">
+                <h2>🔍 Analizador de Contraseñas</h2>
+                <p>Ingresa una contraseña para evaluar su fortaleza:</p>
+                <input type="text" id="passwordInput" placeholder="Escribe una contraseña..." autocomplete="off">
+                <div id="strength-meter">
+                    <div class="meter-bar">
+                        <div id="strength-fill"></div>
+                    </div>
+                    <span id="strength-text">Fortaleza: --</span>
+                </div>
+                <ul id="password-tips"></ul>
+            </div>
+        </section>
+
+        
+        <section id="generator" class="tab-content">
+            <div class="card">
+                <h2>🎲 Generador de Contraseñas</h2>
+                <div class="options">
+                    <label>Longitud: <span id="lengthValue">16</span></label>
+                    <input type="range" id="lengthSlider" min="8" max="32" value="16">
+                    <div class="checkboxes">
+                        <label><input type="checkbox" id="useUpper" checked=""> Mayúsculas (A-Z)</label>
+                        <label><input type="checkbox" id="useLower" checked=""> Minúsculas (a-z</label></div></div></div></section></div>
